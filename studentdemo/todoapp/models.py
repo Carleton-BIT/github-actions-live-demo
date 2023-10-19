@@ -15,5 +15,4 @@ class Task(models.Model):
 
     @property
     def due_soon(self):
-        #return (self.due_date <= timezone.now() + timezone.timedelta(days=1)) and (self.due_date >= timezone.now())
-        return True
+        return (self.due_date <= timezone.now() + timezone.timedelta(days=1)) and (self.due_date >= timezone.now())
